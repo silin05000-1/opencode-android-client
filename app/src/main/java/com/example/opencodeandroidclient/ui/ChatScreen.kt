@@ -172,9 +172,16 @@ private fun MessageBubble(message: ChatMessage) {
     } else {
         MaterialTheme.colorScheme.surfaceVariant
     }
-    val alignment = if (isUser) Alignment.CenterEnd else Alignment.CenterStart
+    val horizontalArrangement = if (isUser) {
+        Arrangement.CenterEnd
+    } else {
+        Arrangement.CenterStart
+    }
 
-    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = alignment) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = horizontalArrangement,
+    ) {
         Card(
             shape = RoundedCornerShape(12.dp),
             colors = CardDefaults.cardColors(containerColor = background),
