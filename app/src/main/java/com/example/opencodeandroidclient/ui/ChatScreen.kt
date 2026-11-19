@@ -173,9 +173,9 @@ private fun MessageBubble(message: ChatMessage) {
         MaterialTheme.colorScheme.surfaceVariant
     }
     val horizontalArrangement = if (isUser) {
-        Arrangement.CenterEnd
+        Arrangement.End
     } else {
-        Arrangement.CenterStart
+        Arrangement.Start
     }
 
     Row(
